@@ -30,6 +30,11 @@ public class UserService {
         return repository.findAll();
     }
 
+    // added after commit
+    private User getLoggedInUser() throws Exception {
+        return getLoggedUser();
+    }
+
     private boolean checkUsernameAvailable(User user) throws Exception {
         Optional<User> userFound = repository.findByUsername(user.getUsername());
         if (userFound.isPresent()) {
