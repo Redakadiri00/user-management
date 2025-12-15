@@ -32,6 +32,7 @@ public class UserService {
 
     // added after commit
     private User getLoggedInUser() throws Exception {
+        string username;
         return getLoggedUser();
     }
 
